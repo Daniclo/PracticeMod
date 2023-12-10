@@ -1,6 +1,9 @@
 package net.danicoll.practicemod;
 
 import com.mojang.logging.LogUtils;
+import net.danicoll.practicemod.item.ModCreativeModTabs;
+import net.danicoll.practicemod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +30,10 @@ public class PracticeMod {
     public PracticeMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //---AÑADIR LAS COSAS CUSTOM AL JUEGO---//
+        ModCreativeModTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        //-------------------------------------//
 
         modEventBus.addListener(this::commonSetup);
 
