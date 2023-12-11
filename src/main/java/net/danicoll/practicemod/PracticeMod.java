@@ -28,6 +28,10 @@ public class PracticeMod {
     public static final String MODID = "practicemod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    /**
+     * Hay que añadir cada clase que se haga al constructor del mod para que funcione
+     */
     public PracticeMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -38,14 +42,8 @@ public class PracticeMod {
         //-------------------------------------//
 
         modEventBus.addListener(this::commonSetup);
-
-
         MinecraftForge.EVENT_BUS.register(this);
-
-
         modEventBus.addListener(this::addCreative);
-
-
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
