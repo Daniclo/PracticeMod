@@ -1,5 +1,8 @@
 {
   "item.practicemod.sapphire": "Sapphire",
   "item.practicemod.raw_sapphire": "Raw Sapphire",
-  "creativetab.example_tab": "Example Materials"
+  "creativetab.example_tab": "Example Materials",
+  "creativetab.example_blocks_tab": "Example Blocks",
+  "block.practicemod.sapphire_block": "Block of Sapphire",
+  "block.practicemod.raw_sapphire_block": "Raw Block of Sapphire"
 }

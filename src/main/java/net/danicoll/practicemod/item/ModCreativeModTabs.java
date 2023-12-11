@@ -1,6 +1,7 @@
 package net.danicoll.practicemod.item;
 
 import net.danicoll.practicemod.PracticeMod;
+import net.danicoll.practicemod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -15,12 +16,21 @@ public class ModCreativeModTabs {
 
 
     //---TABS---//
-    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab",
+    public static final RegistryObject<CreativeModeTab> EXAMPLE_MATERIALS_TAB = CREATIVE_MODE_TABS.register("example_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
                     .title(Component.translatable("creativetab.example_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> EXAMPLE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("example_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.SAPPHIRE_BLOCK.get()))
+                    .title(Component.translatable("creativetab.example_blocks_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                        pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
                     })
                     .build());
 

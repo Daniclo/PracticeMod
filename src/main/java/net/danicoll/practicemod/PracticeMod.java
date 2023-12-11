@@ -1,6 +1,7 @@
 package net.danicoll.practicemod;
 
 import com.mojang.logging.LogUtils;
+import net.danicoll.practicemod.block.ModBlocks;
 import net.danicoll.practicemod.item.ModCreativeModTabs;
 import net.danicoll.practicemod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -33,6 +34,7 @@ public class PracticeMod {
         //---AÑADIR LAS COSAS CUSTOM AL JUEGO---//
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         //-------------------------------------//
 
         modEventBus.addListener(this::commonSetup);
