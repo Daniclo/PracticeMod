@@ -16,6 +16,11 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire", () -> new Item(new Item.Properties()));
 
     //---FIN ITEMS---//
+
+    /**
+     * Registra los items en el mod.
+     * @param eventBus eventBus del mod.
+     */
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
